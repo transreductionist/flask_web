@@ -39,6 +39,7 @@ One day I was _____. I tried to _____ but _____. Instead, I made <PROJECT NAME> 
 - conda install -c conda-forge flask-marshmallow
 - conda install -c conda-forge flask-sqlalchemy
 - conda install -c conda-forge marshmallow-sqlalchemy
+- conda install -c anaconda yaml
 - pip install mysqlclient
   - conda install -c anaconda mysql-connector-python does not support Python 3.8
 - conda list --explicit > conda_requirements.txt

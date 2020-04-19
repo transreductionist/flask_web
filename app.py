@@ -2,21 +2,25 @@
 import sys
 from flask import Flask
 from flask import jsonify
-from flask_essentials import database
 from configuration.command_line_arguments import get_command_line_parser
 from configuration.command_line_arguments import add_arguments
 from configuration.command_line_arguments import parse_args
 from resources.splash import Splash
-from errors.APIErrors import BadRequestError
-
+from errors.api_errors import BadRequestError
+from errors.configuration_loader_errors import ConfigurationLoadingError
+from app_helpers import set_flask_web_configuration
 from flask_restful import Api
+from flask_essentials import database
 
 
 def create_app():
     """The application factory."""
 
     app = Flask('flask_web')
-    database.init_app(app)
+    set_flask_web_configuration('FLASK_WEB')
+
+    database.init_db()
+
     api = Api(app)
 
     api.add_resource(Splash, '/')
@@ -30,6 +34,17 @@ def create_app():
          """
         response = jsonify(error)
         response.status_code = 400
+        return response
+
+    @app.errorhandler(ConfigurationLoadingError)
+    def handle_config_loading_errors(error):
+        """Error handler for pronblems loading configuration.
+
+         :param (obj) error: Error message raised by exception.
+         :return (int) response: the response code
+         """
+        response = jsonify(error)
+        response = 78
         return response
 
     return app

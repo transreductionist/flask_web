@@ -22,10 +22,12 @@ def parse_args(parser, arguments):
     """
     parsed_arguments = parser.parse_args(arguments)
     arguments = dict()
-    for arg_key, arg_value in list(vars(parsed_arguments).keys()):
+    argument_keys = list(vars(parsed_arguments).keys())
+    for arg_key in argument_keys:
+        arg_value = getattr(parsed_arguments, arg_key)
         nomalized_arg_value = normalize_argument_value(arg_value)
         arguments[arg_key] = nomalized_arg_value
-    return parsed_arguments
+    return arguments
 
 
 def normalize_argument_value(arg_value):
@@ -35,13 +37,13 @@ def normalize_argument_value(arg_value):
     :return (obj): the Python builtin type
     """
     if arg_value in ['True', 'False']:
-        arg_value = True
         if arg_value == 'False':
             return False
+        return True
     elif arg_value.isdigit():
-        if isinstance(int, arg_value):
+        if '.' not in arg_value:
             return int(arg_value)
-        elif isinstance(float, arg_value):
+        else:
             return float(arg_value)
     elif arg_value == 'None':
         return None

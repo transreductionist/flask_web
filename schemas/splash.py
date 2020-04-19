@@ -1,7 +1,7 @@
 """Schema for FlashModel."""
 from marshmallow import fields
 from marshmallow_sqlalchemy import ModelSchema
-from flask_web.models.splash import SplashModel
+from models.splash import SplashModel
 
 
 class SplashSchema(ModelSchema):

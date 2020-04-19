@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b7cd41c-dc25-4a67-b219-181bdf310705" name="Default Changelist" comment="" />
+    <list default="true" id="5b7cd41c-dc25-4a67-b219-181bdf310705" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app_helpers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuration/configuration_loader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuration/flask_web.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/errors/configuration_loader_errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration/command_line_arguments.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration/command_line_arguments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/splash.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/splash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/APIErrors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/splash.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/splash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schemas/splash.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/splash.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,17 +39,10 @@
       </set>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/.gitignore" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectId" id="1alVOB8COA15p92gOXB84JPYvWZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -47,6 +54,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/classes" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/controllers" />
       <recent name="$PROJECT_DIR$/errors" />
@@ -54,6 +64,27 @@
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/schemas" />
     </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:5000" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -68,7 +99,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.flask_web">
-    <configuration name="flask_web_get#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/flask_web_get.http">
+    <configuration name="flask_web_get#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" path="$APPLICATION_CONFIG_DIR$/scratches/flask_web_get.http">
       <method v="2" />
     </configuration>
     <configuration name="flask_web" type="PythonConfigurationType" factoryName="Python">
@@ -94,14 +125,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.flask_web" />
       <item itemvalue="HTTP Request.flask_web_get#1" />
+      <item itemvalue="Python.flask_web" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="HTTP Request.flask_web_get#1" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -115,7 +141,8 @@
       <updated>1587310132677</updated>
       <workItem from="1587310133839" duration="6774000" />
       <workItem from="1587318624646" duration="2792000" />
-      <workItem from="1587321609759" duration="2065000" />
+      <workItem from="1587321609759" duration="6459000" />
+      <workItem from="1587332849489" duration="2626000" />
     </task>
     <servers />
   </component>
@@ -127,13 +154,68 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/configuration/command_line_arguments.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app_helpers.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app_helpers.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/configuration/configuration_loader.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/configuration/configuration_loader.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/controllers/splash.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/controllers/splash.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flask_web$flask_web.coverage" NAME="flask_web Coverage Results" MODIFIED="1587323723544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask_web$flask_web.coverage" NAME="flask_web Coverage Results" MODIFIED="1587335706736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

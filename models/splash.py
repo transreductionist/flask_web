@@ -1,6 +1,6 @@
 """The model for the splash screen."""
 
-from application.flask_essentials import database
+from flask_essentials import database
 
 
 class SplashModel(database.Model):
