@@ -14,4 +14,4 @@ def set_flask_web_configuration(env_prefix):
     yml_full_file_path = os.path.join(configuration_directory, yml_filename)
     configuration.update_from_yaml_file(yml_full_file_path)
     configuration.update_from_env_variables(env_prefix)
-    x00 = 0
+    return configuration

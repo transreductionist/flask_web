@@ -17,13 +17,16 @@ def create_app():
     """The application factory."""
 
     app = Flask('flask_web')
-    set_flask_web_configuration('FLASK_WEB')
 
-    database.init_db()
+    configuration = set_flask_web_configuration('FLASK_WEB')
+    app.config.update(configuration)
+    app.config.update({'ENV': 'development', 'DEBUG': True})
+
+    database.init_app(app)
 
     api = Api(app)
 
-    api.add_resource(Splash, '/')
+    api.add_resource(Splash, '/splash')
 
     @app.errorhandler(BadRequestError)
     def handle_400(error):

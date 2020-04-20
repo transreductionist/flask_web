@@ -2,6 +2,7 @@
 from controllers.splash import get_splash
 from schemas.splash import SplashSchema
 from flask_restful import Resource
+from flask import jsonify
 
 
 class Splash(Resource):
@@ -10,6 +11,6 @@ class Splash(Resource):
     @staticmethod
     def get():
         splash = get_splash()
-        schema = SplashSchema()
-        result = schema.dump(splash)
-        return result
+        # schema = SplashSchema()
+        # result = schema.dump(splash)
+        return jsonify(splash)

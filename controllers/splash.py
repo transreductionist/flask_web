@@ -9,5 +9,6 @@ def get_splash():
     :return (int) response: the response.
     """
 
-    all_peters = database.session.query(SplashModel).filter_by(last_name='peters').all()
+    all_peters = database.session.query(SplashModel).all()
+    breakpoint()
     return 200
