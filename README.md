@@ -4,7 +4,7 @@
 
 View the source code at the following [Github repository](https://github.com/transreductionist/flask_web).
 
-Author: **Aaron Peters**
+Author: Aaron Peters
 
 ## What does the project do?
 
